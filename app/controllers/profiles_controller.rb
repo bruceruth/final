@@ -11,10 +11,11 @@ class ProfilesController < ApplicationController
   def signedinuserprofile
     profile = Profile.find_by_user_id(current_user.id)
       if profile.nil?
-        redirect_to "/profile/new"
+        redirect_to "/profiles/new"
       else
         @profile = Profile.find_by_user_id(current_user.id)
         redirect_to "/profile/#{@profile.id}"
+        #redirect_to new_profile_path
       end
   end
   

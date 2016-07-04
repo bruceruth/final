@@ -16,7 +16,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
-    @appointment.price = option.appointment.pricePerPerson
+    #@appointment.price = option.appointment.pricePerPerson
     
     #@appointment.price = Option.all(option_params)
     
@@ -24,14 +24,9 @@ class AppointmentsController < ApplicationController
     #price = Option.find(pricePerPerson)
     #@appointment.price = price.pricePerPerson
    
-    
-    
     #  @rental = Rental.new(rental_params)
-    
     #rentbikeId = params[:rental]
-
     #bike = Bike.find(rentbikeId)
-  
     #@rental.cost = bike.price
     
   
