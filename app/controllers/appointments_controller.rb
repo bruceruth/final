@@ -22,7 +22,7 @@ class AppointmentsController < ApplicationController
     
     #pricePerPerson = params([:appointment])
     #price = Option.find(pricePerPerson)
-    #@appointment.price = price.priceP
+    #@appointment.price = price.pricePerPerson
    
     
     

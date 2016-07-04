@@ -4,11 +4,6 @@ source 'https://rubygems.org'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
-# Use sqlite3 as the database for Active Record - modified for deployment to Heroku
-group :development do
-  gem 'sqlite3'
-end
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,7 +34,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'figaro'
 end
 
 group :development do
@@ -54,5 +48,10 @@ end
 group :production do 
   gem 'pg'
   gem 'rails_12factor'
+end
+
+# Use sqlite3 as the database for Active Record - modified for deployment to Heroku
+group :development do
+  gem 'sqlite3'
 end
 
