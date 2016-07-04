@@ -38,17 +38,9 @@
   <div class="field">
     <%= f.label :timeslot %><br>
     <%#= f.text_field :timeslot %>
-    <%= f.select :timeslot, ['9AM - 11AM', '12 - 2PM', '3PM - 5PM', '6PM - 8PM']%>
-  <!-- <select>
-    <option value="9AM - 11AM">9AM - 11AM</option>
-    <option value="12 - 2PM">12 - 2PM</option>
-    <option value="3PM - 5PM">3PM - 5PM</option>
-    <option value="6PM - 8PM">6PM - 8PM</option>
-  </select> -->
-  </div>
+    <%= f.select :timeslot, ['9AM - 11AM', '12 - 2PM', '3PM - 5PM', '6PM - 8PM'] %>
   </div>
   
-
   <div class="field">
     <% f.label :user_id %><br> 
     <% f.text_field :user_id  %> 
