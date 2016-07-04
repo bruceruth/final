@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Priceperperson:</strong>
+  <%= @option.pricePerPerson %>
+</p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @option.discount %>
+</p>
+
+<p>
+  <strong>Appointment:</strong>
+  <%= @option.appointment %>
+</p>
+
+<%= link_to 'Edit', edit_option_path(@option) %> |
+<%= link_to 'Back', options_path %>

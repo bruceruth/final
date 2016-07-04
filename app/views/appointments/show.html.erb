@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Your Profile: <%= current_user.email%></h3><br><br>
+
+
+<center><h2>** All appointments are €5 per person **</center></h2><br><br>
+
+<!--<h3> Please take note of our available timeslots:</h3>
+<div>
+   <ul>
+    <li>Timeslot 1 = 9AM - 11AM</li>
+    <li>Timeslot 2 = 12PM - 2PM</li>
+    <li>Timeslot 3 = 3PM - 5PM</li>
+    <li>Timeslot 4 = 7PM - 9PM</li>
+  </ul><br>
+</div> -->
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @appointment.name %>
+</p><br>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @appointment.phone %>
+</p><br>
+
+<p>
+  <strong>Email:</strong>
+  <%= @appointment.email %>
+</p><br>
+
+<p>
+  <strong>Number Of People:</strong>
+  <%= @appointment.numpeople %>
+</p><br>
+
+<p>
+  <strong>Date:</strong>
+  <%= @appointment.date %>
+</p><br>
+
+<p>
+  <strong>Timeslot:</strong>
+  <%= @appointment.timeslot %>
+</p><br>
+<p>
+  <strong>Price:</strong>
+  <%#= 5 * @appointment.numpeople %>
+  <%= @appointment.price * @appointment.numpeople %>
+</p><br>
+
+<!-- <p>
+  <strong>User:</strong>
+  <%= @appointment.user %>
+</p><br> -->
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

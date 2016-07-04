@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarotapts3</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav id ="nav"> 
+  <div id="page_nav">
+    <%= link_to 'Home', root_path %> 
+    <%= link_to 'Testimonials', page_testimonials_path %>
+    <%= link_to 'Appointments', appointments_path %>
+    <%= link_to 'Make Appointment', new_appointment_path %>
+    <%= link_to 'Profiles', profiles_path %>
+    <%= link_to 'Options', options_path %>
+
+
+
+  </div>
+ 
+  <div id ="sign_in">
+    <% if user_signed_in? %>
+          <div>Signed in as... <%= current_user.email %>
+            (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete%>)
+          </div>
+      <% else %>
+        <%= link_to 'Register', new_user_registration_path %> or
+        <%= link_to 'Sign in', new_user_session_path %>
+      <% end %>
+  </div>
+</nav>  
+  
+<div id="main_wrap">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+</div>
+
+</body>
+</html>

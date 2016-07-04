@@ -1,0 +1,59 @@
+<br><h3>**All appointments are €5 per person </h3><br>
+
+
+<%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+      
+
+      <ul>
+      <% @appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :numpeople %><br>
+    <%= f.number_field :numpeople %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :timeslot %><br>
+    <%#= f.text_field :timeslot %>
+    <%= f.select :timeslot, ['9AM - 11AM', '12 - 2PM', '3PM - 5PM', '6PM - 8PM']%>
+  <!-- <select>
+    <option value="9AM - 11AM">9AM - 11AM</option>
+    <option value="12 - 2PM">12 - 2PM</option>
+    <option value="3PM - 5PM">3PM - 5PM</option>
+    <option value="6PM - 8PM">6PM - 8PM</option>
+  </select> -->
+  </div>
+  </div>
+  
+
+  <div class="field">
+    <% f.label :user_id %><br> 
+    <% f.text_field :user_id  %> 
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
