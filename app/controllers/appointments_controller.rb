@@ -10,12 +10,17 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1
   # GET /appointments/1.json
+  #edited to allow show for particular id, following the introduction of price() 
   def show
+    @appointment = Appointment.find(params[:id])
+    #respond_with @appointment
   end
 
   # GET /appointments/new
   def new
     @appointment = Appointment.new
+    
+    @appointment.price
     #@appointment.price = option.appointment.pricePerPerson
     
     #@appointment.price = Option.all(option_params)
@@ -40,11 +45,12 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
-
+    
+  
     respond_to do |format|
       if @appointment.save
         #format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
-        format.html { redirect_to appointments_path, notice: 'Appointment was successfully created.' }
+        format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
       else
         format.html { render :new }
