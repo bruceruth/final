@@ -12,29 +12,20 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1.json
   #edited to allow show for particular id, following the introduction of price() 
   def show
+    #if option.present?
+            #ruth = option.pricePerPerson*numpeople
+            #price = option.pricePerPerson*numpeople
+            #return ruth
+    #end
     @appointment = Appointment.find(params[:id])
-    #respond_with @appointment
+    #@appointment.ruth
+    
   end
 
   # GET /appointments/new
   def new
     @appointment = Appointment.new
-    
-    @appointment.price
-    #@appointment.price = option.appointment.pricePerPerson
-    
-    #@appointment.price = Option.all(option_params)
-    
-    #pricePerPerson = params([:appointment])
-    #price = Option.find(pricePerPerson)
-    #@appointment.price = price.pricePerPerson
-   
-    #  @rental = Rental.new(rental_params)
-    #rentbikeId = params[:rental]
-    #bike = Bike.find(rentbikeId)
-    #@rental.cost = bike.price
-    
-  
+    @appointment.calculatePrice
   end
 
   # GET /appointments/1/edit
@@ -46,10 +37,8 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(appointment_params)
     
-  
     respond_to do |format|
       if @appointment.save
-        #format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
       else

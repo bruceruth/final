@@ -14,8 +14,8 @@ class ProfilesController < ApplicationController
         redirect_to "/profiles/new"
       else
         @profile = Profile.find_by_user_id(current_user.id)
-        redirect_to "/profile/#{@profile.id}"
-        #redirect_to new_profile_path
+        #redirect_to "/profile/#{@profile.id}"
+        redirect_to @profile
       end
   end
   

@@ -47,8 +47,9 @@
 </p><br>
 <p>
   <strong>Price:</strong>
-  <%#= 5 * @appointment.numpeople %>
-  <%= @appointment.price %>
+  <%= @appointment.option.pricePerPerson if @appointment.option %>
+  <!--* @appointment.numpeople %> -->
+  <%#= @appointment.price %>
 </p><br>
 
 <!-- <p>
