@@ -76,7 +76,7 @@ Rails.application.configure do
 
 
   # configuring the database to deploy to heroku
-  config.serve_static_assets = true
+  #config.serve_static_assets = true
  
  
   # Do not dump schema after migrations.
