@@ -30,8 +30,8 @@ class MessagesController < ApplicationController
       if @message.save
         #call the method to deliver the message.
         #ContactMailer.deliver_message(@message).deliver
-        require 'open-uri'
-        response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=:email%40here&{#:subject}subject&message=:message').read
+#        require 'open-uri'
+#        response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=:email%40here&{#:subject}subject&message=:message').read
 
         
         format.html { redirect_to @message, notice: 'Thanks for your message!' }

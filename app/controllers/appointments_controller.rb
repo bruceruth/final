@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
+  #before_filter :ensure_admin, :only => [:edit, :destroy]
 
   # GET /appointments
   # GET /appointments.json
