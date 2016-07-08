@@ -19,7 +19,8 @@
  }
 
 html, body {
-    background-color: blue;
+    background-image: url("pink1.jpg");
+    background-color: pink;
 }
  
  #nav{
