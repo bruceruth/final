@@ -21,7 +21,7 @@
 body{
 
     /* background-color:  #ffb3d9 */
-    background-image: @url.Content("pink1.jpg");
+    background-image: url('<%= asset_path 'pink1.jpg' %>');
     background-repeat: no-repeat;
     background-size: 100% 115%;
 }
