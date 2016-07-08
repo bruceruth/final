@@ -4,14 +4,4 @@ class Appointment < ActiveRecord::Base
     has_one :option
     
 
-#    def calculatePrice
-#        if option.present?
-            #ruth = option.pricePerPerson*numpeople
-            #price = option.pricePerPerson*numpeople
-            #return ruth
-#        else
-#            return 6
-#        end
-#    end
-
 end

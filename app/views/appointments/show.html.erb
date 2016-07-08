@@ -1,19 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1>**Thank you for your appointment!**</h1><br><br>
 <h3>Your Profile: <%= current_user.email%></h3><br><br>
-
-
-<center><h2>** All appointments are €5 per person **</center></h2><br><br>
-
-<!--<h3> Please take note of our available timeslots:</h3>
-<div>
-   <ul>
-    <li>Timeslot 1 = 9AM - 11AM</li>
-    <li>Timeslot 2 = 12PM - 2PM</li>
-    <li>Timeslot 3 = 3PM - 5PM</li>
-    <li>Timeslot 4 = 7PM - 9PM</li>
-  </ul><br>
-</div> -->
 
 
 <p>
@@ -47,9 +35,9 @@
 </p><br>
 <p>
   <strong>Price:</strong>
-  <%= @appointment.option.pricePerPerson if @appointment.option %>
-  <!--* @appointment.numpeople %> -->
-  <%#= @appointment.price %>
+  <%#= @appointment.option.pricePerPerson if @appointment.option %>
+
+  €<%= @appointment.numpeople * 5 %>
 </p><br>
 
 <!-- <p>

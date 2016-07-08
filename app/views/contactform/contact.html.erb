@@ -1,0 +1,32 @@
+
+<html>
+	<head>
+		<title>
+			Contact Us
+		</title>
+	</head>
+	<body>
+		<h1>Please enter your details and message</h1>
+		<br><br>
+		
+		<form name="myForm" action="http://mqttmartin.mybluemix.net/sendMail" method="get">
+
+			<input type="hidden" name="email_to" value="angeltarotcarrick@gmail.com">	<!-- Put the receiver here -->
+			
+			<div>
+			Your E-Mail address : <br>
+			<input type="text" name="from"><br>
+			<br><br>
+			
+			Subject : <br>
+			<input type="text" name="subject"><br>
+			<br><br>
+
+			Message : <br>
+			<textarea rows="6" cols="50" name="message"></textarea><br>
+			<br><br>
+			
+			<input type="Submit">
+		</form>
+	</body>
+</html>

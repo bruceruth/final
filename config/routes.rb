@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'contactform/contact'
+
   resources :messages
   resources :profiles
   resources :appointments

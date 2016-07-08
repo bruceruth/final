@@ -12,20 +12,15 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1.json
   #edited to allow show for particular id, following the introduction of price() 
   def show
-    #if option.present?
-            #ruth = option.pricePerPerson*numpeople
-            #price = option.pricePerPerson*numpeople
-            #return ruth
-    #end
     @appointment = Appointment.find(params[:id])
-    #@appointment.ruth
     
+
   end
 
   # GET /appointments/new
   def new
     @appointment = Appointment.new
-    @appointment.calculatePrice
+    #price = 5 * numpeople
   end
 
   # GET /appointments/1/edit
@@ -36,7 +31,13 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
-    
+    #Send the tarot reader an email to say they have a new appointment
+    require 'open-uri'
+    response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=You+have+a+new+appointment+on+angeltarotcarrick').read
+    #send the customer and email to confirm their appointment
+    #response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=You+have+a+new+appointment+on+angeltarotcarrick').read
+     #response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=user.name%40here&subject=My+message&message=appointment.date, appointment.timeslot').read
+
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }

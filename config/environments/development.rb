@@ -23,18 +23,34 @@ Rails.application.configure do
   #set up email server!
   #ActionMailer::Base.delivery_method = :smtp
   #ActionMailer::Base.smtp_settings = {
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'gmail.com',
-  user_name:            ENV['angeltarotcarrick@gmail.com'],
-  password:             ENV['angeltarot'],
-  authentication:       'plain',
-  enable_starttls_auto: true  }
+  
+  
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #address:              'smtp.gmail.com',
+  #port:                 587,
+  #port:                  2587,
+  #domain:               'gmail.com',
+  #user_name:            ENV['angeltarotcarrick@gmail.com'],
+  #password:             ENV['angeltarot'],
+  #authentication:       'plain',
+  #enable_starttls_auto: true  }
+  
+#  config.action_mailer.default_url_options = {host: "https://angeltarotcarrick.herokuapp.com/"}
+#  config.action_mailer.delivery = :smtp
+#  ActionMailer::Base.smtp_settings = {
+#  :address        => 'smtp.sendgrid.net',
+#  :port           => '587',
+#  :authentication => :plain,
+#  :user_name      => ENV['SENDGRID_USERNAME'],
+#  :password       => ENV['SENDGRID_PASSWORD'],
+#  :domain         => 'heroku.com',
+#  :enable_starttls_auto => true
+#}
+
 
   #set the CONTACT_RECIPIENT email Address-Wherever I want the email to go
-  CONTACT_RECIPIENT = "angeltarotcarrick@gmail.com"
+  #CONTACT_RECIPIENT = "angeltarotcarrick@gmail.com"
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
