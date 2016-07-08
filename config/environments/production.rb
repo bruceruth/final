@@ -74,6 +74,18 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+
+  # configuring the database to deploy to heroku
+  config.serve_static_assets = true
+ 
+ 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+ 
+ 
+  #config.action_mailer.delivery_method = :smtp
+  # SMTP settings for gmail
+  #config.action_mailer.smtp_settings = {
+
 end

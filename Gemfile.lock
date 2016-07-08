@@ -164,7 +164,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (~> 4.2.5.1)
   byebug
   coffee-rails (~> 4.1.0)
   devise
