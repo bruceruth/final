@@ -5,8 +5,16 @@
 			Contact Us
 		</title>
 	</head>
-	<body>
-		<h1>Please enter your details and message</h1>
+	<body><font color = "black">
+		<h1>Please enter your details and message</h1><br>
+		<h3>You can use this form to: </h3><br>
+		<p>Please note your intention in the subject box</p>
+		<ul>
+			<li>Submit a testimonial</li>
+			<li>Request an online reading</li>
+			<li>Cancel or change an appointment</li>
+			<li>Anything else</li>
+		</ul></font>
 		<br><br>
 		
 		<form name="myForm" action="http://mqttmartin.mybluemix.net/sendMail" method="get">
@@ -15,11 +23,17 @@
 			
 			<div>
 			Your E-Mail address : <br>
-			<input type="text" name="from"><br>
-			<br><br>
+			<input type="text" name="from"><br><br>
 			
 			Subject : <br>
 			<input type="text" name="subject"><br>
+			<!-- <select> name="subject">
+			  <option value= text>Submit Review</option>
+			  <option value="Cancel or Change Appointment">Cancel or change appointment</option>
+			  <option value="Request Online Reading">Request Online Reading</option>
+			  <option value="Other">Other</option>
+			</select> 
+			<br><br> -->
 			<br><br>
 
 			Message : <br>
