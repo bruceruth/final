@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  #config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -75,12 +75,12 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # configuring the database to deploy to heroku
-  #config.serve_static_assets = true
+  config.serve_static_assets = true
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
   #config.action_mailer.delivery_method = :smtp
 # SMTP settings for gmail
-config.action_mailer.smtp_settings = {
+#config.action_mailer.smtp_settings = {
 
 end
