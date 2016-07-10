@@ -1,0 +1,166 @@
+/* line 1, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /home/ubuntu/workspace/tarotapts3/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+ }
+
+html, body {
+    background-color: pink;
+    /*background-image: url("angel1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+ 
+ #nav{
+     width: 100%;
+     height: 40px;
+     background: #707070 ;
+     float: left;
+ }
+
+#page_nav a{
+    line-height: 40px;
+    color: white;
+    padding: 0 10px 0 10px;
+    text-decoration: 0;
+    
+}
+
+#sign_in a {
+    line-height: 40px;
+    color: red;
+    padding: 0 20px 0 20px;
+    text-decoration: 0;
+}
+
+#page_nav{
+    margin: 0 0 0 5%;
+    float: left;
+}
+
+#sign_in{
+    float: right;
+    margin: 0 5% 0 0;
+}
+
+#main_wrap{
+    width: 90%;
+    float: left;
+    margin: 15px 5% 0 5%;
+}
+
+#angieDiv{
+    width: 90%;
+    padding: 25px;
+    border: 25px groove navy;
+    margin: 25px;
+}
+
+#marieDiv{
+    width: 90%;
+    padding: 25px;
+    border: 25px groove pink;
+    margin: 25px;
+}
+
+#saoirseDiv{
+    width: 90%;
+    padding: 25px;
+    border: 25px groove white;
+    margin: 25px;
+}
