@@ -14,8 +14,6 @@ class AppointmentsController < ApplicationController
   #edited to allow show for particular id, following the introduction of price() 
   def show
     @appointment = Appointment.find(params[:id])
-    
-
   end
 
   # GET /appointments/new
@@ -33,14 +31,15 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(appointment_params)
     #Send the tarot reader an email to say they have a new appointment
-    require 'open-uri'
-    response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=You+have+a+new+appointment+on+angeltarotcarrick').read
-    #send the customer and email to confirm their appointment
+     #send the customer and email to confirm their appointment
     #response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=You+have+a+new+appointment+on+angeltarotcarrick').read
      #response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=user.name%40here&subject=My+message&message=appointment.date, appointment.timeslot').read
 
     respond_to do |format|
       if @appointment.save
+        #require 'open-uri'
+        #response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick@gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=You+have+a+new+appointment+on+angeltarotcarrick').read
+   
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
       else

@@ -19,19 +19,23 @@
  }
 
 html, body {
-    background-color: #ff80bf;
+    background-color: pink;
+    /*background-image: url("angel1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
+
  
  #nav{
      width: 100%;
      height: 40px;
-     background: MistyRose ;
+     background: #707070 ;
      float: left;
  }
 
 #page_nav a{
     line-height: 40px;
-    color: black;
+    color: white;
     padding: 0 10px 0 10px;
     text-decoration: 0;
     

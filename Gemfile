@@ -54,4 +54,10 @@ end
 group :development do
   gem 'sqlite3'
 end
+   
 
+group :test do
+  gem 'rails-controller-testing'
+  gem 'minitest-reporters'
+
+end
