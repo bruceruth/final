@@ -14,12 +14,14 @@ class AppointmentsController < ApplicationController
   #edited to allow show for particular id, following the introduction of price() 
   def show
     @appointment = Appointment.find(params[:id])
+    
+
   end
 
   # GET /appointments/new
   def new
     @appointment = Appointment.new
-    #price = 5 * numpeople
+    # @appointment.price = 5 * numpeople
   end
 
   # GET /appointments/1/edit

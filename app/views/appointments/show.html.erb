@@ -45,5 +45,7 @@
   <%= @appointment.user %>
 </p><br> -->
 
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+<%= link_to 'Edit', edit_appointment_path(@appointment) %>
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to 'Back', appointments_path %>
+<% end %>

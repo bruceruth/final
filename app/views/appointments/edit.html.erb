@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @appointment %> |
-<%= link_to 'Back', appointments_path %>
+<%= link_to 'Show', @appointment %> 
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to 'Back', appointments_path %>
+<% end %>

@@ -25,6 +25,13 @@ html, body {
     background-size: 100% 100% ;
 }
 
+#footer{
+    width: auto;
+    height: 40%;
+    background-color: pink;
+    text-align: center;
+}
+
  
  #nav{
      width: 100%;

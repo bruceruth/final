@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.png'%>
 </head>
   <body>
     
@@ -19,7 +20,7 @@
         <% if user_signed_in? && current_user.admin? %>
           <%= link_to 'Appointments', appointments_path %>
           <%= link_to 'Profiles', profiles_path %>
-          <%#= link_to 'My Appointments', appointment_path(current_user.appointment.last) %>
+          <%#= link_to 'Appointments', appointments_path(current_user.appointment.last) %>
           <%#= link_to 'My appointment',current_user.appointments.last.id %>
           <%#= link_to 'Options', options_path %>
           <%#= link_to 'Contact Us', new_message_path %>
@@ -29,10 +30,9 @@
      
       <div id ="sign_in">
         <% if user_signed_in? %>
-              <div>Signed in as... <%= current_user.email %>
-                (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete%>)
+              <div>Signed in as: <%= current_user.email %>
+                <%= link_to 'Sign out', destroy_user_session_path, :method => :delete%>
                 <%= link_to 'Edit Your Profile', profile_path(current_user.profile) if current_user.profile %>
-    
               </div>
           <% else %>
             <%= link_to 'Register', new_user_registration_path %> or
@@ -46,6 +46,17 @@
       <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
-  
+  <br><br><br>
+  <div id='footer'>
+    <div id = 'footer_a'>
+    <h6 class="footertext">&copy; Angel Tarot Carrick &trade; 2016</h6>
+    </div>
+    <div id = 'footer_b'>
+    <h6><%= link_to 'Home', root_path %> |
+    <%=  link_to 'Contact', contactform_contact_path %> </h6>
+    </div>
+  </div>
+    
+
 </body>
 </html>

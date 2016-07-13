@@ -32,5 +32,7 @@
   <% @profile.user %>
 </p> -->
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Edit', edit_profile_path(@profile) %> 
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to 'Back', profiles_path %>
+<% end %>

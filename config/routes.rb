@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
-  get 'contactform/contact'
-
   resources :messages
   resources :profiles
   resources :appointments
   resources :options
   devise_for :users
     
- 
   root 'page#home'
   get 'page/testimonials'
+  get 'contactform/contact'
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   #get 'page/home'
   # The priority is based upon order of creation: first created -> highest priority.
