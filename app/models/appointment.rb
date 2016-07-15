@@ -3,5 +3,10 @@ class Appointment < ActiveRecord::Base
     belongs_to :user
     has_one :option
     
+    def self.search(search_for)
+        #Appointment.where('name = ?', search_for)
+        Appointment.where('date = ?', search_for)
+    end
+
 
 end

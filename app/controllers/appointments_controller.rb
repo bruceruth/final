@@ -7,7 +7,18 @@ class AppointmentsController < ApplicationController
   # GET /appointments.json
   def index
     @appointments = Appointment.all
+    
+    if params[:search]
+      #select all the profiles which match the search pattern
+      @appointments = Appointment.search(params[:search])
+      #order the selected rows ascending by created at field
+      @appointments = @appointments.order("created_at ASC")
+    else
+      #order all the rows descending by created_at field
+      @appointments = @appointments.order("created_at DESC")
+    end
   end
+  
 
   # GET /appointments/1
   # GET /appointments/1.json

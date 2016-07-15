@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
   def index
     @profiles = Profile.all
   end
-
+  
   def signedinuserprofile
     profile = Profile.find_by_user_id(current_user.id)
       if profile.nil?
