@@ -55,12 +55,12 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        #retrieve the instance of the MyLogger class here
+        ##retrieve the instance of the MyLogger class here
         #logger = MyLogger.instance
         #logger.logInformation ("*Singleton Pattern*: New appointment made by: " + @appointment.name)
 
-        #require 'open-uri'
-        #response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick@gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=You+have+a+new+appointment+on+angeltarotcarrick').read
+        require 'open-uri'
+        response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick@gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=new+appointment+on+angeltarotcarrick').read
    
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
