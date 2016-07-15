@@ -1,4 +1,7 @@
 class AppointmentsController < ApplicationController
+ require 'my_logger' #This line tells the controller where the logger solution is defined. So that the controller
+                        #has access to the MyLogger class
+    
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
   #before_filter :ensure_admin, :only => [:edit, :destroy]
@@ -7,6 +10,8 @@ class AppointmentsController < ApplicationController
   # GET /appointments.json
   def index
     @appointments = Appointment.all
+    
+    #@options = @appointment.options
     
     if params[:search]
       #select all the profiles which match the search pattern
@@ -50,6 +55,10 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
+        #retrieve the instance of the MyLogger class here
+        #logger = MyLogger.instance
+        #logger.logInformation ("*Singleton Pattern*: New appointment made by: " + @appointment.name)
+
         #require 'open-uri'
         #response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick@gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=You+have+a+new+appointment+on+angeltarotcarrick').read
    

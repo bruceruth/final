@@ -36,8 +36,10 @@
 <p>
   <strong>Price:</strong>
   <%#= @appointment.option.pricePerPerson if @appointment.option %>
-
-  €<%= @appointment.numpeople * 5 %>
+  <%#= @options.pricePerPerson * numpeople %>
+  <%# @appointment.numpeople * 5 %>
+  <% @total = @appointment.numpeople * 5 %>
+  <%= @total %>
 </p><br>
 
 <!-- <p>
