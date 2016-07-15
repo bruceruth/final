@@ -23,3 +23,15 @@ ________________________________________________________________________________
 *RentalObserver*: Appointment made on: 2016-07-19. Time6PM - 8PM No. of People:5. Price: 25
 *RentalObserver*: Customer Name: Ruth Stephenson. Customer Phone892259814 Customer Email:ruth.stephenson1@gmail.com
 --------------------------------------------------------------------------------------------------------------------------------------------
+*RentalObserver*: Appointment made on: 2016-07-20. Time12 - 2PM No. of People:5. Price: 25
+*RentalObserver*: Customer Name: Ruth Stephenson. Customer Phone892259814 Customer Email:ruth.stephenson1@gmail.com
+--------------------------------------------------------------------------------------------------------------------------------------------
+*RentalObserver*: Appointment made on: 2016-07-21. Time9AM - 11AM No. of People:5. Price: 25
+*RentalObserver*: Customer Name: Ruth Stephenson. Customer Phone892259814 Customer Email:ruth.stephenson1@gmail.com
+--------------------------------------------------------------------------------------------------------------------------------------------
+*RentalObserver*: Appointment made on: 2016-07-22. Time12 - 2PM No. of People:10. Price: 50
+*RentalObserver*: Customer Name: Ruth Stephenson. Customer Phone892259814 Customer Email:ruth.stephenson1@gmail.com
+--------------------------------------------------------------------------------------------------------------------------------------------
+*RentalObserver*: Appointment made on: 2016-07-22. Time9AM - 11AM No. of People:5. Price: 25
+*RentalObserver*: Customer Name: Ruth Stephenson. Customer Phone892259814 Customer Email:ruth.stephenson1@gmail.com
+--------------------------------------------------------------------------------------------------------------------------------------------

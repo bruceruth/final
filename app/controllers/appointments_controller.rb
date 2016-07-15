@@ -60,7 +60,10 @@ class AppointmentsController < ApplicationController
         #logger.logInformation ("*Singleton Pattern*: New appointment made by: " + @appointment.name)
 
         require 'open-uri'
-        response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick@gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=new+appointment+on+angeltarotcarrick').read
+        response = open("http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick@gmail.com&from=angeltarotcarrick@gmail.com&subject=New+Appointment&message=Customer Name: #{@appointment.name} Date and time: #{@appointment.date}#{@appointment.timeslot}Number of People:#{@appointment.numpeople} Customer Email: #{@appointment.email}").read
+   
+        require 'open-uri'
+        response = open("http://mqttmartin.mybluemix.net/sendMail?email_to=#{@appointment.email}&from=angeltarotcarrick@gmail.com&subject=Thank+you+for+your+appointment!&message=Message Details: Name: #{@appointment.name} Date: #{@appointment.date} Time: #{@appointment.timeslot}").read
    
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
