@@ -1,6 +1,16 @@
-Rails.application.configure do
+##
+## config/environments/production.rb
+##
+## Version 1
+##
+## 02/06/2016
+##
+## @reference Rails autp-generated code
+## @reference https://devcenter.heroku.com/articles/sendgrid#ruby-rails
+##
   # Settings specified here will take precedence over those in config/application.rb.
 
+Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -82,8 +92,10 @@ config.assets.compile = true
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
- 
- 
+## 
+## @reference https://devcenter.heroku.com/articles/sendgrid#ruby- (unused)
+## 
+  
   #config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
   #config.action_mailer.smtp_settings = {}

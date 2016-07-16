@@ -1,12 +1,35 @@
+## config/routes.rb
+##
+## Version 1
+##
+## 02/06/2016
+##
+## @reference Rails auto-generated code
+## @author Ruth Stephenson, x15009335
+## @reference Tutorial on Devise, @author Adriana Chis
+## @reference Tutorial on Design Patterns, @author Adriana Chis
+
+##
+
+
 source 'https://rubygems.org'
 
+ gem 'sass-rails'
+ 
 #add the gem to use observer pattern:
+
+##
+## @reference Tutorial on Design Patterns, @author Adriana Chis
+##
 gem 'rails-observers'
+
+##
+## @reference Tutorial on Devise, @author Adriana Chis
+##
 gem 'devise'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -46,11 +69,18 @@ group :development do
   
 end
 
+##
+## @reference Tutorial on Deploying To Heroku, @author Adriana Chis
+##
 group :production do 
   gem 'pg'
   gem 'rails_12factor'
 end
 
+
+##
+## @reference Tutorial on Deploying To Heroku, @author Adriana Chis
+##
 # Use sqlite3 as the database for Active Record - modified for deployment to Heroku
 group :development do
   gem 'sqlite3'

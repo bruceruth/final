@@ -1,3 +1,13 @@
+## OptionsController < ApplicationController
+##
+## Version 1
+##
+## 02/06/2016
+##
+## @reference Rails auto-generated code
+##
+
+
 class OptionsController < ApplicationController
   before_action :set_option, only: [:show, :edit, :update, :destroy]
 

@@ -1,7 +1,21 @@
+## ProfilesController < ApplicationController
+##
+## Version 1
+##
+## 02/06/2016
+##
+## @author Adriana Chis (Take from Tutorial on Devise)
+##
+
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+
+##  
+#Modified(commented out) to ensure the customer can have the option to edit their profile
+##@author Ruth Stephenson X15009335  
   #before_filter :authenticate_user!
   #before_filter :ensure_admin, except: [:edit, :update]
+
   #ensure that only admin can see all profiles:
   def ensure_admin
     unless current_user && current_user.admin?

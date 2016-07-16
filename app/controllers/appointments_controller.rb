@@ -1,10 +1,31 @@
+##AppointmentsController < ApplicationController
+##
+## Version 1
+##
+## 02/07/2016
+##
+## @reference Rails auto-generated code
+## @author Ruth Stephenson, X15009335
+##
+
 class AppointmentsController < ApplicationController
+##
+## @author Adriana Chis. Rails Tutorial Design Patterns
+##
  require 'my_logger' #This line tells the controller where the logger solution is defined. So that the controller
                         #has access to the MyLogger class
-    
+ 
+## @reference Rails auto-generated code    
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
+## @author Ruth Stephenson X15009335
+##This line of code will ensure the user is logged before allowing them to make an appointment
   before_filter :authenticate_user!
   #before_filter :ensure_admin, :only => [:edit, :destroy]
+
+
+##
+## @reference Rails auto-generated code
+##
 
   # GET /appointments
   # GET /appointments.json
@@ -48,23 +69,27 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
-    #Send the tarot reader an email to say they have a new appointment
-     #send the customer and email to confirm their appointment
-    #response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=angeltarotcarrick%gmail.com&subject=New+message+for+you&message=You+have+a+new+appointment+on+angeltarotcarrick').read
-     #response = open('http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick%40gmail.com&from=user.name%40here&subject=My+message&message=appointment.date, appointment.timeslot').read
 
     respond_to do |format|
       if @appointment.save
+## (Unused) @reference. Tutorial given by Adriana Chis. Mofified for specific file/action
         ##retrieve the instance of the MyLogger class here
         #logger = MyLogger.instance
         #logger.logInformation ("*Singleton Pattern*: New appointment made by: " + @appointment.name)
-
+        
+## @author Ruth Stephenson X15009335
+##
+        #Call the uri to deliver confirmation emails to the customer and the tarot reader. 
         require 'open-uri'
         response = open("http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick@gmail.com&from=angeltarotcarrick@gmail.com&subject=New+Appointment&message=Customer Name: #{@appointment.name}. Date and time: #{@appointment.date} #{@appointment.timeslot}. Number of People: #{@appointment.numpeople}. Customer Email: #{@appointment.email}").read
    
         require 'open-uri'
         response = open("http://mqttmartin.mybluemix.net/sendMail?email_to=#{@appointment.email}&from=angeltarotcarrick@gmail.com&subject=Thank+you+for+your+appointment!&message=Message Details: Name: #{@appointment.name}. Date: #{@appointment.date}. Time: #{@appointment.timeslot} No. of People: #{@appointment.numpeople}").read
-   
+
+
+##
+## @reference Rails auto-generated code
+##   
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
       else

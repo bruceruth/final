@@ -1,3 +1,14 @@
+## MyLogger
+##
+## Version 1
+##
+## 14/07/2016
+##
+## @reference Tutorial on Design Patterns - Observer Pattern
+## @author Adriana Chis
+##
+
+
 require 'singleton'
 
 class MyLogger

@@ -1,4 +1,17 @@
+## Message < ActiveRecord::Base
+##
+## Version 1
+##
+## 02/07/2016
+##
+## @reference Rails auto-generated code
+## @author Ruth Stephesnon x5009335
+##
+
 class Message < ActiveRecord::Base
+    
+## @author Ruth Stephesnon x5009335
+## Added validations
     #validates that these fields can't be empty
     validates_presence_of :name, :subject, :body
     

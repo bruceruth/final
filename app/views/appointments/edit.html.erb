@@ -1,8 +1,19 @@
+<!--
+* Editing Appointments
+*
+* Version 1
+*
+* 02/06/2016
+*
+* @reference https: Rails auto-generated code
+* @author Ruth Stephenson, X15009335
+-->
+
 <h1>Editing Appointment</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @appointment %> 
-<% if user_signed_in? && current_user.admin? %>
+<% if user_signed_in? && current_user.admin? %>    <!-- @author Ruth Stephenson, X15009335, Hide the link to appointments index unless admin-->
   <%= link_to 'Back', appointments_path %>
 <% end %>

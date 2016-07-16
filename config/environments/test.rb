@@ -1,3 +1,13 @@
+##
+## config/environments/test.rb
+##
+## Version 1
+##
+## 02/06/2016
+##
+## @reference Rails autp-generated code
+##
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 

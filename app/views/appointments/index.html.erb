@@ -1,8 +1,22 @@
+<!--
+* Editing Appointments
+*
+* Version 1
+*
+* 02/06/2016
+*
+* @reference https: Rails auto-generated code
+* @author Ruth Stephenson, X15009335
+-->
+
 <% if current_user.admin? %>
 
   <p id="notice"><%= notice %></p>
   
   <br><br>
+<!--  @reference https: Tutorial on searchbars-->
+<!--  @author Adriana Chis-->
+<!--  @author Ruth Stephenson - Modified search per requirements->
     <%= form_tag(appointments_path, :method => "get") do %>
     <%#= text_field_tag :search, nil, :placeholder => "Search Full Name" %>
     <%= text_field_tag :search, nil, :placeholder => "Search Date (YYYY-MM-DD)" %>

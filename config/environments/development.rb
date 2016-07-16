@@ -1,6 +1,18 @@
+##
+## config/environments/development.rb
+##
+## Version 1
+##
+## 02/06/2016
+##
+## @reference Rails auto-generated code
+## @author Ruth Stephenson - smtp settings for sendgrid
+## @reference Tutorial on Devise
+## @author Adriana Chis - modified to add action_mailer.default_url_options. As per tutorial on Devise
+
 Rails.application.configure do
-  
-  config.action_mailer.default_url_options = { host: ENV['IP'], port: ENV['PORT'] }
+
+  config.action_mailer.default_url_options = { host: ENV['IP'], port: ENV['PORT'] }  ## @author Adriana Chis
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -18,8 +30,10 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
+##
+## @author Ruth Stephenson  x15009335 (unused)
+##
 
-  
   #set up email server!
   #ActionMailer::Base.delivery_method = :smtp
   #ActionMailer::Base.smtp_settings = {

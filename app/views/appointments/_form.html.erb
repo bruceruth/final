@@ -1,7 +1,20 @@
-<br><h3>**All appointments are €5 per person** <br><br>
-** Min 5 people per group **</h3><br><br>
+<!--
+## appointments_form.html.erb
+##
+## Version 1
+##
+## Date e.g. 10/06/2016
+##
+## @reference Rails auto-generated code
+## @author Ruth Stephenson, X15009335
+## -->
 
-<center><h2>If you wish to cancel or change an appointment, please <%= link_to 'Email',  contactform_contact_path %></h2></center>
+
+
+<br><h3>**All appointments are €5 per person** <br><br>   <!-- @author Ruth Stephenson, X15009335 -->
+** Min 5 people per group **</h3><br><br>                 <!-- @author Ruth Stephenson, X15009335 -->
+
+<center><h2>If you wish to cancel or change an appointment, please <%= link_to 'Email',  contactform_contact_path %></h2></center>  <!-- @author Ruth Stephenson, X15009335 -->
 <br>
 
 <%= form_for(@appointment) do |f| %>
@@ -32,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :numpeople %><br>
-    <%= f.number_field :numpeople, value: 5, in:5...21 %>
+    <%= f.number_field :numpeople, value: 5, in:5...21 %>   <!-- @author Ruth Stephenson, X15009335 Modified range-->
   </div>
   <div class="field">
     <%= f.label :date %><br>
@@ -41,7 +54,7 @@
   <div class="field">
     <%= f.label :timeslot %><br>
     <%#= f.text_field :timeslot %>
-    <%= f.select :timeslot, ['9AM - 11AM', '12 - 2PM', '3PM - 5PM', '6PM - 8PM'] %>
+    <%= f.select :timeslot, ['9AM - 11AM', '12 - 2PM', '3PM - 5PM', '6PM - 8PM'] %>   <!-- @author Ruth Stephenson, X15009335 -->
   </div>
   
   <div class="field">

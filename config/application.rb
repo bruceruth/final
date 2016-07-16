@@ -1,3 +1,14 @@
+##
+## config/application.rb
+##
+## Version 1
+##
+## 02/06/2016
+##
+## @reference Rails autp-generated code
+## @reference Tutorial on Devise, @author Adriana Chis
+##
+
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -22,6 +33,7 @@ module Tarotapts3
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.active_record.observers = :appointment_observer
+    config.active_record.observers = :appointment_observer   ## @reference Tutorial on Devise, @author Adriana Chis
+
   end
 end

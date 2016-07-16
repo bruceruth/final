@@ -1,3 +1,14 @@
+<!--
+## application.css stylesheet
+##
+## Version 1
+##
+## Date e.g. 10/06/2016
+##
+## @reference https://www.youtube.com/watch?v=Wo2-PcGD4mE&index=3&list=PL5Dq9xKbrI3CZRfqbyyesEvyYg-ivIPUq (Tutorial 3)
+## @author Ruth Stephenson, X15009335
+## -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +16,9 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= favicon_link_tag 'favicon.png'%>
+  
+  <%= favicon_link_tag 'favicon.png'%> <!-- @author Ruth Stephenson x15009335 -->
+
 </head>
   <body>
     
@@ -17,7 +30,7 @@
         <%= link_to 'Contact Form',  contactform_contact_path %>
         
         <!-- LIMIT THE VIEW OF THESE LINKS FOR THE ADMIN ONLY -->
-        <% if user_signed_in? && current_user.admin? %>
+        <% if user_signed_in? && current_user.admin? %>      <!--  @author Ruth Stephenson 15009335 -->
           <%= link_to 'Appointments', appointments_path %>
           <%= link_to 'Profiles', profiles_path %>
           <%#= link_to 'Appointments', appointments_path(current_user.appointment.last) %>
@@ -27,7 +40,8 @@
         <% end %>
     </div>
       
-     
+<!--  @reference Tutorial on Devise
+      @author Adriana Chis. -->
       <div id ="sign_in">
         <% if user_signed_in? %>
               <div>Signed in as: <%= current_user.email %>
@@ -47,13 +61,16 @@
       <%= yield %>
     </div>
   <br><br><br>
+   
+<!--  @reference Tutorial on Sytling. 
+      @authror Adriana Chis-->
   <div id='footer'>
     <div id = 'footer_a'>
-    <h6 class="footertext">&copy; Angel Tarot Carrick &trade; 2016</h6>
+    <h6 class="footertext">&copy; Angel Tarot Carrick &trade; 2016</h6>   <!--  @author Ruth Stephenson x15009335 -->
     </div>
     <div id = 'footer_b'>
-    <h6><%= link_to 'Home', root_path %> |
-    <%=  link_to 'Contact', contactform_contact_path %> </h6>
+    <h6><%= link_to 'Home', root_path %>                        <!--  @author Ruth Stephenson x15009335 -->
+    <%=  link_to 'Contact', contactform_contact_path %> </h6>   <!--  @author Ruth Stephenson x15009335 -->
     </div>
   </div>
     

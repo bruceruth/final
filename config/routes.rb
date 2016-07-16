@@ -1,3 +1,16 @@
+##
+## config/routes.rb
+##
+## Version 1
+##
+## 02/06/2016
+##
+## @reference Rails autp-generated code
+## @reference Tutorial on Devise, @author Adriana Chis
+## @author Ruth Stephenson, x15009335
+##
+
+
 Rails.application.routes.draw do
   resources :messages
   resources :profiles
@@ -7,8 +20,8 @@ Rails.application.routes.draw do
     
   root 'page#home'
   get 'page/testimonials'
-  get 'contactform/contact'
-  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
+  get 'contactform/contact'                                         ##@author Ruth Stephenson, x15009335
+  get '/signedinuserprofile' => 'profiles#signedinuserprofile'      ## @reference Tutorial on Devise, @author Adriana Chis
   #get 'page/home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

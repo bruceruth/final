@@ -1,3 +1,13 @@
+## mylog.txt
+##
+## Version 1
+##
+## 02/06/2016
+##
+## @author Ruth Stephenson, x15009335
+##
+
+
 New appointment made byRuth Stephenson
 ***********************************************************************************************************************************************************
 *RentalObserver*: Appointment made on: 2016-07-16. Time12 - 2PM No. of People:5. Price: {record.price}
