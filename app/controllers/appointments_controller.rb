@@ -51,8 +51,7 @@ class AppointmentsController < ApplicationController
   #edited to allow show for particular id, following the introduction of price() 
   def show
     @appointment = Appointment.find(params[:id])
-    
-
+  
   end
 
   # GET /appointments/new
@@ -77,7 +76,7 @@ class AppointmentsController < ApplicationController
         #logger = MyLogger.instance
         #logger.logInformation ("*Singleton Pattern*: New appointment made by: " + @appointment.name)
         
-## @author Ruth Stephenson X15009335
+## @reference Martin Stephenson Java API. Permission to use this api was granted to me for delivery of mail.
 ##
         #Call the uri to deliver confirmation emails to the customer and the tarot reader. 
         require 'open-uri'

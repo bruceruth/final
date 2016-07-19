@@ -28,6 +28,7 @@
         <%= link_to 'Testimonials', page_testimonials_path %>
         <%= link_to 'Make Appointment', new_appointment_path %>
         <%= link_to 'Contact Form',  contactform_contact_path %>
+        <%= link_to 'Cancellations & Pricacy',  privacy_policy_privacyPolicy_path %>
         
         <!-- LIMIT THE VIEW OF THESE LINKS FOR THE ADMIN ONLY -->
         <% if user_signed_in? && current_user.admin? %>      <!--  @author Ruth Stephenson 15009335 -->
