@@ -12,6 +12,8 @@
 
 
 Rails.application.routes.draw do
+  get 'privacy_policy/privacyPolicy'
+
   resources :messages
   resources :profiles
   resources :appointments
