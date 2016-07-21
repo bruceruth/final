@@ -24,9 +24,8 @@ class Appointment < ActiveRecord::Base
 ## @author Ruth Stephenson - adapted for my own particular search.
 ##   
     def self.search(search_for)
-        #Appointment.where('name Like ?', search_for)
-        Appointment.where('date = ?', search_for)
-    end
-
-
+        Appointment.where('name LIKE ?', "%#{search_for}%")
+        #Appointment.where('date = ?', search_for)
+    end    
+        
 end

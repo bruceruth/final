@@ -17,11 +17,11 @@
 <!--  @author Adriana Chis-->
 <!--  @author Ruth Stephenson - Modified search per requirements -->
     <%= form_tag(appointments_path, :method => "get") do %>
-    <%#= text_field_tag :search, nil, :placeholder => "Search Full Name" %>
-    <%= text_field_tag :search, nil, :placeholder => "Search Date (YYYY-MM-DD)" %>
+    <%= text_field_tag :search, nil, :placeholder => "Search Name" %>
+    <%#= text_field_tag :search, nil, :placeholder => "Search Date (YYYY-MM-DD)" %>
     <%= submit_tag "Search" %> 
   <% end %><br><br>
-      
+  
 
   <h1>Listing Appointments</h1>
   

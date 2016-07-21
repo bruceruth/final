@@ -45,6 +45,10 @@ class AppointmentsController < ApplicationController
     end
   end
   
+  def search
+    Appointment.search(search_params)
+  end
+
 
   # GET /appointments/1
   # GET /appointments/1.json
