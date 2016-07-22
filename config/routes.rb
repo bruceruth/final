@@ -14,10 +14,8 @@
 Rails.application.routes.draw do
   get 'privacy_policy/privacyPolicy'
 
-  resources :messages
   resources :profiles
   resources :appointments
-  resources :options
   devise_for :users
     
   root 'page#home'
