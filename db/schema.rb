@@ -27,26 +27,6 @@ ActiveRecord::Schema.define(version: 20160708161334) do
 
   add_index "appointments", ["user_id"], name: "index_appointments_on_user_id"
 
-  create_table "messages", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "phone"
-    t.string   "subject"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "options", force: :cascade do |t|
-    t.decimal  "pricePerPerson"
-    t.integer  "discount"
-    t.integer  "appointment_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  add_index "options", ["appointment_id"], name: "index_options_on_appointment_id"
-
   create_table "profiles", force: :cascade do |t|
     t.string   "firstname"
     t.string   "lastname"
