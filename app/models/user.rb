@@ -14,7 +14,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 ## @author Ruthe Stephenson x15003995
-## Added the relationships between tables
+## Added the relationships between tables, profiles is dependent on user. If user is destroyed,
+##their profile is automatically destroyed
+##
   has_many :appointments
-  has_one :profile
+  has_one :profile, dependent: :destroy
 end
