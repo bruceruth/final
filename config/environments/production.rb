@@ -118,7 +118,7 @@ config.assets.compile = true
   #user_name: ENV["angeltarotcarrick@gmail.com"],
   #password: ENV["angeltarot"]
   #}
-  
+ require 'mail' 
   ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
   :port           => '587',
