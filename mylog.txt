@@ -52,3 +52,7 @@ ________________________________________________________________________________
  Appointment made on: 2016-07-23. Time9AM - 11AM No. of People:5. Price: 25
  Customer Name: Ruth Stephenson. Customer Phone892259814 Customer Email:ruth.stephenson1@gmail.com
 --------------------------------------------------------------------------------------------------------------------------------------------
+*AppointmentObserver: }
+ Appointment made on: 2016-07-23. Time12 - 2PM No. of People:5. Price: 25
+ Customer Name: Ruth Stephenson. Customer Phone892259814 Customer Email:ruth.stephenson1@gmail.com
+--------------------------------------------------------------------------------------------------------------------------------------------

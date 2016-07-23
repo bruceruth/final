@@ -27,8 +27,7 @@
         <li role="presentation"><%= link_to 'Make Appointment', new_appointment_path %></li>
         <li role="presentation"><%= link_to 'Contact Us', contactform_contact_path %></li>
         <li role="presentation"><%= link_to 'Cancellations & Pricacy', privacy_policy_privacyPolicy_path %></li>
-        <li role="presentation"><%= link_to 'Your Profile', profile_path(current_user) %></li>
-        
+
         <!-- LIMIT THE VIEW OF THESE LINKS FOR THE ADMIN ONLY -->
         <% if user_signed_in? && current_user.admin? %>
           <li role="presentation"><%= link_to 'Profiles', profiles_path %></li>
@@ -49,8 +48,7 @@
         <% end %> 
       </div>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
       
      <div class="container">  
       <%= yield %>
