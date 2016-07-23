@@ -118,8 +118,9 @@ config.assets.compile = true
   #user_name: ENV["angeltarotcarrick@gmail.com"],
   #password: ENV["angeltarot"]
   #}
- require 'mail' 
- Mail.defaults do
+
+  require 'mail' 
+  Mail.defaults do
   ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
   :port           => '587',
@@ -129,7 +130,7 @@ config.assets.compile = true
   :domain         => 'heroku.com',
   :enable_starttls_auto => true
 }
-end
+  end
 
 
 
