@@ -18,50 +18,44 @@
   <%= csrf_meta_tags %>
   
   <%= favicon_link_tag 'favicon.png'%> <!-- @author Ruth Stephenson x15009335 -->
-
 </head>
   <body>
-    
-    <nav id ="nav"> 
-      <div id="page_nav">
-        <%= link_to 'Home', root_path %> 
-        <%= link_to 'Testimonials', page_testimonials_path %>
-        <%= link_to 'Make Appointment', new_appointment_path %>
-        <%= link_to 'Contact Form',  contactform_contact_path %>
-        <%= link_to 'Cancellations & Pricacy',  privacy_policy_privacyPolicy_path %>
+
+      <ul class="nav nav-tabs">
+        <li role="presentation"><%= link_to 'Home', root_path %></li>
+        <li role="presentation"><%= link_to'Testimonials', page_testimonials_path %></li>
+        <li role="presentation"><%= link_to 'Make Appointment', new_appointment_path %></li>
+        <li role="presentation"><%= link_to 'Contact Us', contactform_contact_path %></li>
+        <li role="presentation"><%= link_to 'Cancellations & Pricacy', privacy_policy_privacyPolicy_path %></li>
+        <li role="presentation"><%= link_to 'Your Profile', profile_path(current_user) %></li>
         
         <!-- LIMIT THE VIEW OF THESE LINKS FOR THE ADMIN ONLY -->
-        <% if user_signed_in? && current_user.admin? %>      <!--  @author Ruth Stephenson 15009335 -->
-          <%= link_to 'Appointments', appointments_path %>
-          <%= link_to 'Profiles', profiles_path %>
-          <%#= link_to 'Appointments', appointments_path(current_user.appointment.last) %>
-          <%#= link_to 'My appointment',current_user.appointments.last.id %>
-          <%#= link_to 'Options', options_path %>
-          <%#= link_to 'Contact Us', new_message_path %>
+        <% if user_signed_in? && current_user.admin? %>
+          <li role="presentation"><%= link_to 'Profiles', profiles_path %></li>
+          <li role="presentation"><%= link_to 'Appointments', appointments_path %></li>
         <% end %>
-    </div>
       
-<!--  @reference Tutorial on Devise
-      @author Adriana Chis. -->
-      <div id ="sign_in">
+      </ul>
+      
+      <div id="sign_in">
         <% if user_signed_in? %>
-              <div>Signed in as: <%= current_user.email %>
-                <%= link_to 'Sign out', destroy_user_session_path, :method => :delete%>
-                <%= link_to 'Edit Your Profile', profile_path(current_user.profile) if current_user.profile %>
-              </div>
-          <% else %>
-            <%= link_to 'Register', new_user_registration_path %> or
-            <%= link_to 'Sign in', new_user_session_path %>
-          <% end %>
+          <div> Signed in as : <%= current_user.email %>
+            <%= link_to '(Sign out)', destroy_user_session_path, :method => :delete%> 
+            
+    </div>
+        <% else %>  
+          <%= link_to 'Register', new_user_registration_path %> or 
+          <%= link_to 'Sign in', new_user_session_path %>
+        <% end %> 
       </div>
-    </nav>  
- 
-    <div id="main_wrap">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+      
+     <div class="container">  
       <%= yield %>
     </div>
-  <br><br><br>
+ 
    
 <!--  @reference Tutorial on Sytling. 
       @authror Adriana Chis-->

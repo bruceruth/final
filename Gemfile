@@ -14,8 +14,10 @@
 
 source 'https://rubygems.org'
 
- gem 'sass-rails'
- 
+gem 'sass-rails'
+gem 'bootstrap-sass' #install bootstrap to change front end appearance
+gem 'therubyracer'
+gem 'less', '~> 2.6'
 #add the gem to use observer pattern:
 
 ##

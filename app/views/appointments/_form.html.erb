@@ -11,18 +11,16 @@
 
 
 
-<br><h3>**All appointments are €5 per person** <br><br>   <!-- @author Ruth Stephenson, X15009335 -->
-** Min 5 people per group **</h3><br><br>                 <!-- @author Ruth Stephenson, X15009335 -->
+<br><h3>**All appointments are €5 per person**<br><br>    <!-- @author Ruth Stephenson, X15009335 -->
+** Min 5 people per group **</h3><br><!-- @author Ruth Stephenson, X15009335 -->
 
-<center><h2>If you wish to cancel or change an appointment, please <%= link_to 'Email',  contactform_contact_path %></h2></center>  <!-- @author Ruth Stephenson, X15009335 -->
-<br>
+<center><h2>Please <%= link_to '*Email*'  , contactform_contact_path %>  if you wish to cancel or change an appointment.</h2></center>  <!-- @author Ruth Stephenson, X15009335 -->
 
 <%= form_for(@appointment) do |f| %>
   <% if @appointment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
       
-
       <ul>
       <% @appointment.errors.full_messages.each do |message| %>
         <li><%= message %></li>

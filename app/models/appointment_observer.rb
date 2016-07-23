@@ -21,8 +21,9 @@ class AppointmentObserver < ActiveRecord::Observer
 ## Modified message with parameters from Appointments
 ##
         # use the logger to log/record a message about the updated car
-        @logger.logInformation("*RentalObserver*: Appointment made on: #{record.date}. Time#{record.timeslot} No. of People:#{record.numpeople}. Price: #{record.numpeople*5}")
-        @logger.logInformation("*RentalObserver*: Customer Name: #{record.name}. Customer Phone#{record.phone} Customer Email:#{record.email}")
+        @logger.logInformation("*AppointmentObserver: }")
+        @logger.logInformation(" Appointment made on: #{record.date}. Time#{record.timeslot} No. of People:#{record.numpeople}. Price: #{record.numpeople*5}")
+        @logger.logInformation(" Customer Name: #{record.name}. Customer Phone#{record.phone} Customer Email:#{record.email}")
         @logger.logInformation("--------------------------------------------------------------------------------------------------------------------------------------------")
 
     end
