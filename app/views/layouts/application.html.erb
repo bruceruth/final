@@ -27,6 +27,8 @@
         <li role="presentation"><%= link_to 'Make Appointment', new_appointment_path %></li>
         <li role="presentation"><%= link_to 'Contact Us', contactform_contact_path %></li>
         <li role="presentation"><%= link_to 'Cancellations & Pricacy', privacy_policy_privacyPolicy_path %></li>
+        <li role="presentation"><%= link_to "Checkout", 'https://www.paypal.com/ie/webapps/mpp/home' %></li> 
+        
 
         <!-- LIMIT THE VIEW OF THESE LINKS FOR THE ADMIN ONLY -->
         <% if user_signed_in? && current_user.admin? %>
@@ -62,11 +64,12 @@
     <h6 class="footertext">&copy; Angel Tarot Carrick &trade; 2016</h6>   <!--  @author Ruth Stephenson x15009335 -->
     </div>
     <div id = 'footer_b'>
-    <h6><%= link_to 'Home', root_path %>                        <!--  @author Ruth Stephenson x15009335 -->
+    <h6><%= link_to 'Home', root_path %> |                       <!--  @author Ruth Stephenson x15009335 -->
     <%=  link_to 'Contact', contactform_contact_path %> </h6>   <!--  @author Ruth Stephenson x15009335 -->
+    
+    
     </div>
   </div>
-    
 
 </body>
 </html>
