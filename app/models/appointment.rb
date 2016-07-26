@@ -15,7 +15,9 @@ class Appointment < ActiveRecord::Base
 ##
     validates :timeslot, uniqueness: {scope: :date} #this will return a validation error if an oppointment exists with the same date and timeslot
     validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
-    
+    validates :name, presence: true
+    validates :phone, presence: true
+     
     belongs_to :user
 ##
 ## @reference Taken from Tutorial "Implementing a Search Functionality"
