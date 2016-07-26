@@ -8,7 +8,10 @@
 ##
 
 class ProfilesController < ApplicationController
+  
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
+  before_filter :ensure_admin, :only => [:edit, :destroy]
 
 ##  
 #Modified(commented out) to ensure the customer can have the option to edit their profile

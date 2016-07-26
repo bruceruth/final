@@ -95,11 +95,6 @@ config.assets.compile = true
 ## 
 ## @reference https://devcenter.heroku.com/articles/sendgrid#ruby- (unused)
 ## 
-  
-  #config.action_mailer.delivery_method = :smtp
-  # SMTP settings for gmail
-  #config.action_mailer.smtp_settings = {}
-
 
   config.action_mailer.default_url_options = { :host => 'https://angeltarotcarrick.herokuapp.com/' }
   Rails.application.routes.default_url_options[:host] = 'https://angeltarotcarrick.herokuapp.com/'
@@ -108,15 +103,6 @@ config.assets.compile = true
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
 
-  #config.action_mailer.smtp_settings = {
-  #address: "smtp.gmail.com",
-  #port: 587,
-  #domain: ENV["GMAIL_DOMAIN"],
-  #authentication: "plain",
-  #enable_starttls_auto: true,
-  #user_name: ENV["angeltarotcarrick@gmail.com"],
-  #password: ENV["angeltarot"]
-  #}
 
   # Configuration for using SendGrid on Heroku
   ActionMailer::Base.delivery_method = :smtp

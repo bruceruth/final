@@ -17,7 +17,6 @@ class Appointment < ActiveRecord::Base
     validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
     
     belongs_to :user
-    has_many :options
 ##
 ## @reference Taken from Tutorial "Implementing a Search Functionality"
 ## @author Adriana Chis
@@ -25,7 +24,6 @@ class Appointment < ActiveRecord::Base
 ##   
     def self.search(search_for)
         Appointment.where('name LIKE ?', "%#{search_for}%")
-        #Appointment.where('date = ?', search_for)
     end    
         
 end

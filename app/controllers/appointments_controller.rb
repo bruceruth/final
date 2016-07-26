@@ -20,7 +20,7 @@ class AppointmentsController < ApplicationController
 ## @author Ruth Stephenson X15009335
 ##This line of code will ensure the user is logged before allowing them to make an appointment
   before_filter :authenticate_user!
-  #before_filter :ensure_admin, :only => [:edit, :destroy]
+  before_filter :ensure_admin, :only => [:edit, :destroy]
 
 
 ##
@@ -84,7 +84,7 @@ class AppointmentsController < ApplicationController
 ##
         #Call the uri to deliver confirmation emails to the customer and the tarot reader. 
         require 'open-uri'
-        response = open("http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick@gmail.com&from=angeltarotcarrick@gmail.com&subject=New+Appointment&message=Customer Name: #{@appointment.name}. Date and time: #{@appointment.date} #{@appointment.timeslot}. Number of People: #{@appointment.numpeople}. Customer Email: #{@appointment.email}").read
+        response = open("http://mqttmartin.mybluemix.net/sendMail?email_to=angeltarotcarrick@gmail.com&from=angeltarotcarrick@gmail.com&subject=New+Appointment&message=Customer Name: #{@appointment.name}. Date and time: #{@appointment.date} #{@appointment.timeslot}. Number of People: #{@appointment.numpeople}.Customer Email: #{@appointment.email}").read
    
         require 'open-uri'
         response = open("http://mqttmartin.mybluemix.net/sendMail?email_to=#{@appointment.email}&from=angeltarotcarrick@gmail.com&subject=Thank+you+for+your+appointment!&message=Message Details: Name: #{@appointment.name}. Date: #{@appointment.date}. Time: #{@appointment.timeslot} No. of People: #{@appointment.numpeople}").read
