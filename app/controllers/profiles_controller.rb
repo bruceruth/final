@@ -14,7 +14,6 @@ class ProfilesController < ApplicationController
   before_filter :ensure_admin, :only => [:edit, :destroy]
 
 ##  
-#Modified(commented out) to ensure the customer can have the option to edit their profile
 ##@author Ruth Stephenson X15009335  
   #before_filter :authenticate_user!
   #before_filter :ensure_admin, except: [:edit, :update]
@@ -32,6 +31,7 @@ class ProfilesController < ApplicationController
     @profiles = Profile.all
   end
   
+  #make sure user has a profile
   def signedinuserprofile
     profile = Profile.find_by_user_id(current_user.id)
       if profile.nil?
