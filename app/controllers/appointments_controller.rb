@@ -14,11 +14,7 @@ class AppointmentsController < ApplicationController
 ##
  require 'my_logger' #This line tells the controller where the logger solution is defined. So that the controller
                         #has access to the MyLogger class
- 
-## @reference Rails auto-generated code    
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-## @author Ruth Stephenson X15009335
-##This line of code will ensure the user is logged before allowing them to make an appointment
   before_filter :authenticate_user!
   before_filter :ensure_admin, :only => [:edit, :destroy]
 
